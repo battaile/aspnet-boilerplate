@@ -1,0 +1,57 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@ViewBag.Title - Yamaha Invoice Import</title>
+  @Styles.Render("~/Content/css")
+
+</head>
+<body>
+  <!-- <li>@Html.ActionLink("Send Email", "Index", "Email")</li> -->
+
+  <div class="container">
+    <nav class="navbar navbar-inverse " style="top:10px">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Yamaha Invoices</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Invoice Number">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+    @RenderBody()
+    <hr />
+    <footer>
+      <p>&copy; @DateTime.Now.Year - Outdoor Network</p>
+    </footer>
+  </div>
+
+  @Scripts.Render("~/bundles/js")
+  @RenderSection("scripts", false)
+  @*
+    just gonna leave this here as I'm probably gonna use it, but please delete if this is still commented out once the app goes live
+    <script type="text/javascript">
+        function feedback(message) {
+          var feedbackPanel = document.getElementById('feedbackPanel');
+          feedbackPanel.innerHTML += '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' +
+            message + '.</div>';
+        }
+
+        function reportError(message) {
+          var feedbackPanel = document.getElementById('feedbackPanel');
+          feedbackPanel.innerHTML += '<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' +
+            message + '.</div>';
+        }
+      </script>*@
+</body>
+</html>
